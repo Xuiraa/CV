@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --shadow-default: inset 0px 0px 2px 0px var(--color-b);
+
+            /*** Color ***/
+            --color-w: #eee;
+            --color-b: rgb(18, 18, 200);
+            --color-bc: hsl(250, 100%, 30%);
+            --bg-color: hsl(240, 4%, 97%);
+            --bor-color-light: hsl(275, 50%, 25%);
+            --color-primary: rgb(18,18,255);
+            --color-secondary: hsl(240, 100%, 50%);
+
+            /*** Font ***/
+            --font-robots: serif;
+            --font-robot: sans-serif;
+
+            /*** Dimension ***/
+            --largeur: 21cm;
+            --longueur: 29.7cm;
+            --coef: .25;
+
+            /*Calcul*/
+            --column1: calc(var(--largeur) * var(--coef));
+            --column2: calc(var(--largeur) - var(--column1));
+
+            --col1: calc(var(--column1) - var(--mar-feuille));
+
+            --row2: calc(var(--longueur) - var(--column1) - 2 * var(--mar-feuille));
+            --head-height: calc(var(--column1) - 2 * var(--pad-s));
+
+            /*Margin*/
+            --bor-xs: 1px;
+            --bor-s: 2px;
+            --bor-m: 4px;
+            --bor-l: 6px;
+            --bor-xl: 8px;
+            --bor-xxl: ;
+            --mar-feuille: 40px;
+            --pad-s: 10px;
+            --pad-default: 20px;
+            --pad-m: 30px;
+            --margin-low: 10px;
+            --margin-medium: 30px;
+            --margin-large: 30px;
+        }
+    </style>
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="gridbox page gridPage-cv">
+
+    <!--Fond principale-->  
+    <div class="bandeau-bg bg-primary"></div>
+
+    <div class="gridbox cv grid-cv g-c1-4">
+        
+        <header id="head-cv">
+          <!--Carte de visite-->
+          <div class="flexbox bg-primary">
+            <div class="head-img">
+              <picture>
+                <source src="asset/img/securite.png" >
+                <img src="asset/img/securite.png" alt="Photo de profil">
+              </picture>
+            </div>
+    
+            <div class="info-perso">
+    
+              <h1>Yvan DA LUZ</h1>
+    
+              <address>
+    
+                <p>Numero : <a href="tel:+33761179189">07.61.17.91.89</a></p>
+                <p>E-mail : <a href="mailto:yvandaluz@live.fr">yvandaluz@live.fr</a></p>
+                <p>Adresse : 6 rue Jean Nayrou 09270 Mazères</p>
+                <p>Permis B, véhicule personnel</p>
+    
+              </address>
+    
+            </div>
+    
+          </div>
+    
+        </header>
+        
+        <aside id="info-cv" class="container bg-primary">
+          <!--Bandeau-->
+    
+          <div class="bandeau">
+    
+            <!--Compétence-->
+            <section id="comp">
+    
+              <div id="competence">
+    
+                <h3>compétences</h3>
+    
+                <details id="comp-1" class="detail">
+                  <!--Informatique-->
+    
+                  <summary class="bouton">
+    
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M6 18H18V6H6V18ZM14 20H10V22H8V20H5C4.44772 20 4 19.5523 4 19V16H2V14H4V10H2V8H4V5C4 4.44772 4.44772 4 5 4H8V2H10V4H14V2H16V4H19C19.5523 4 20 4.44772 20 5V8H22V10H20V14H22V16H20V19C20 19.5523 19.5523 20 19 20H16V22H14V20ZM8 8H16V16H8V8Z"></path></svg>
+                        <!--<img src="asset/img/pc-white.svg" alt="Informatique">-->
+                        <p>Informatique</p>
+                    </span>
+    
+                    <progress id="informatique" max="100" value="75"></progress>
+    
+                    <hr>
+    
+                  </summary>
+    
+                  <div>
+    
+                    <p>
+                    <ul>
+                      <p>Programmation&nbsp;:</p>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>C#</li>
+                    </ul>
+                    </p>
+    
+                  </div>
+    
+                </details>
+    
+                <details id="comp-2" class="detail">
+                    <!--Mécanique-->
+                    
+                    <summary class="bouton">
+                    
+                      <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M12 1L21.5 6.5V17.5L12 23L2.5 17.5V6.5L12 1ZM12 3.311L4.5 7.65311V16.3469L12 20.689L19.5 16.3469V7.65311L12 3.311ZM12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12C16 14.2091 14.2091 16 12 16ZM12 14C13.1046 14 14 13.1046 14 12C14 10.8954 13.1046 10 12 10C10.8954 10 10 10.8954 10 12C10 13.1046 10.8954 14 12 14Z"></path></svg>
+                          <!--<img src="asset/img/ecrou-white.svg"alt="mecanique">-->
+                          <p>Mécanique</p>
+                      </span>
+      
+                      <progress id="mecanique" max="100" value="75"></progress>
+      
+                      <hr>
+    
+                    </summary>
+    
+                    <div>
+    
+                        <p>
+                            <ul>
+                                <p>CAO/DAO&nbsp;:</p>
+                                <li>SolidWorks</li>
+                                <li>CatiaV5</li>
+                                <li>AutoCAD</li>
+                            </ul>
+                        </p>
+    
+                  </div>
+    
+                </details>
+    
+                <details id="comp-3" class="detail">
+                  <!--Maintenance-->
+    
+                  <summary class="bouton">
+    
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill="none" d="M0 0h24v24H0z"></path><path d="M5.32943 3.27152C6.56252 2.83314 7.9923 3.10743 8.97927 4.0944C10.1002 5.21531 10.3019 6.90735 9.5843 8.23378L20.293 18.9436L18.8788 20.3579L8.16982 9.64869C6.84325 10.3668 5.15069 10.1653 4.02952 9.04415C3.04227 8.0569 2.7681 6.62659 3.20701 5.39326L5.44373 7.62994C6.02952 8.21572 6.97927 8.21572 7.56505 7.62994C8.15084 7.04415 8.15084 6.0944 7.56505 5.50862L5.32943 3.27152ZM15.6968 5.15506L18.8788 3.38729L20.293 4.80151L18.5252 7.98349L16.7574 8.33704L14.6361 10.4584L13.2219 9.04415L15.3432 6.92283L15.6968 5.15506ZM8.97927 13.2868L10.3935 14.701L5.09018 20.0043C4.69966 20.3948 4.06649 20.3948 3.67597 20.0043C3.31334 19.6417 3.28744 19.0698 3.59826 18.6773L3.67597 18.5901L8.97927 13.2868Z"></path></svg>
+                      <!--<img src="asset/img/mecanicien-pc-white.svg" alt="Maintenance">-->
+                      <p>Maintenance</p>
+    
+                    </span>
+    
+                    <progress id="maintenance" max="100" value="50"></progress>
+    
+                    <hr>
+    
+                  </summary>
+    
+                  <div>
+    
+                    <p>
+                    <ul>
+                      <p>&nbsp;:</p>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                    </p>
+    
+                  </div>
+    
+                </details>
+    
+              </div>
+    
+            </section>
+    
+            <!--Qualité-->
+            <section id="pointFort">
+    
+              <ul class="decal">
+    
+                <h3>qualités</h3>
+    
+                <li>
+                  <p>Rigoureux</p>
+                </li>
+    
+                <li>
+                  <p>Autonome</p>
+                </li>
+    
+                <li>
+                  <p>Curieux</p>
+                </li>
+    
+              </ul>
+    
+            </section>
+    
+            <!--Centre d'intérêt-->
+            <sectionid="interet">
+    
+              <div  class="">
+    
+                <h3>centre d'intérêt</h3>
+    
+                <details id="int-1" class="detail">
+                  <!--Jardinage-->
+    
+                  <summary class="bouton">
+                    <p>Jardinage</p>
+                    <hr>
+                  </summary>
+    
+                  <div>
+    
+                    <p>Sur mon balcon en appartement, je fait pousser&nbsp;:</p>
+    
+                    <details class="det-light">
+    
+                      <summary>Des plantes arômatiques:</summary>
+    
+                      <ol>
+                        <ul>
+                          <li>Menthe</li>
+                          <li>Persil</li>
+                          <li>Ciboulette</li>
+                          <li>Thym</li>
+                        </ul>
+                      </ol>
+    
+                    </details>
+    
+                    <details class="det-light">
+                      <summary>Plante grasse:</summary>
+                      <ol>
+                        <ul>
+                          <li>Aloé</li>
+                          <li>Cactus</li>
+                        </ul>
+                      </ol>
+    
+                    </details>
+    
+                    <details class="det-light">
+                      <summary>Fruit et légumes:</summary>
+                      <ol>
+                        <ul>
+                          <li>Tomates</li>
+                          <li>Pomme de terres</li>
+                          <li>Fraises</li>
+                        </ul>
+                      </ol>
+    
+                    </details>
+                  </div>
+    
+                </details>
+    
+                <details id="int-2" class="detail">
+    
+                  <summary class="bouton">
+                    <p></p>
+                    <hr>
+                  </summary>
+    
+                  <div>
+    
+                  </div>
+    
+                </details>
+    
+                <details id="int-3" open class="detail">
+    
+                  <summary class="bouton">
+                    <p></p>
+                    <hr>
+                  </summary>
+    
+                  <div>
+    
+                  </div>
+    
+                </details>
+    
+              </div>
+    
+            </section>
+    
+          </div>
+    
+        </aside>
+    
+        <main id="main-cv" class="container">
+          <!--Experience et recherche-->
+    
+          <div class="contain">
+    
+            <section id="presentation">
+    
+                <h2 class="bg-primary"><span class="bg-h2 bg-primary">Opérateur de maintenance</span></h2>
+
+                <p>Passionné de numérique, je recherche un travail dans la maintenance pour étoffer mes compétences éléctroniques. Aillant un fort intérêt pour l'informatique, j'ai voulut continuer dans ce secteur.</p>
+    
+            </section>
+    
+            <!--Formation & Diplôme-->
+            <section id="format">
+    
+              <div class="formations">
+    
+                <h3 class="bg-primary">formation & diplôme</h3>
+
+                <div class="gridbox">
+
+                  <details>
+      
+                      <summary class="formation datef">
+                          <h4>BAC SIN (Systeme Informatique et Numérique)</h4>
+                          <span class="date">&nbsp;- 2013 / 2015</span>
+                          <span class="lieu">&nbsp;- Cité de Mirepoix</span>
+                      </summary>
+      
+                      <div class="complement">
+                          <p>Apprentissage de la conception de carte éléctronique et des bonnes pratique sur l'ordinateur.</p>
+                      </div>
+      
+                  </details>
+      
+                  <details>
+      
+                    <summary class="formation datef">
+                        <h4>BTS CIM (Conception et Industrialisation en Micro-technique)</h4>
+                        <span class="date">&nbsp;- 2015 - 2017</span>
+                        <span class="lieu">&nbsp;- Cité de Mirepoix</span>
+                    </summary>
+                    
+                    <div class="complement">
+                      <p>Apprentissage de la conception de carte éléctronique et d'ensemble de pièce mécanique pour de la domotique, robotique.</p>
+                    </div>
+      
+                  </details>
+      
+                  <details>
+      
+                      <summary class="formation datef">
+                          <h4>Formation Catia V5</h4>
+                          <span class="date">&nbsp;- 2019 - durée 6 mois</span>
+                          <span class="lieu">&nbsp;- Leno - Nailloux</span>
+                      </summary>
+                      
+                      <div class="complement">
+                          <p>Formation pour apprendre à utiliser Catia V5 et AutoCAD.</p>
+                      </div>
+                      
+                  </details>
+      
+                  <details>
+                      
+                      <summary class="formation datef">
+                          <h4>Formation Maçonnerie</h4>
+                          <span class="date">&nbsp;- 2021 - durée 6 mois</span><span class="lieu">&nbsp;- AFPA - Pamiers</span>
+                      </summary>
+                    
+                      <div class="complement">
+                        <p>Formation pour apprendre le travail de maçon.</p>
+                      </div>
+                        
+                  </details>
+                  
+                </div>
+    
+              </div>
+    
+            </section>
+    
+            <!--Expériences-->
+            <section id="exper">
+    
+              <div class="experiences">
+    
+                <h3 class="bg-primary">expériences</h3>
+    
+                <div class="gridbox">
+
+                  <details>
+                      
+                      <summary class="poste datep">
+                          <h4>Opérateur de project numérique</h4>
+                          <span class="date">&nbsp;- Juin 2022 - Aujourd'hui</span><span class="lieu">&nbsp;- Digitanie - Saverdun 09700</span>
+                      </summary>
+      
+                      <div class="complement">
+                        <p>Vectorisation de zone urbane avec QGIS et création de page web sur CMS Joomla.</p>
+                      </div>
+  
+                  </details>
+      
+                  <details>
+                      
+                      <summary class="poste datep">
+                          <h4>Opérateur de Maintenance en imprimante</h4>
+                          <span class="date">&nbsp;- Novembre 2021 - Janvier 2022</span><span class="lieu">&nbsp;- Bureaux solution - Pamiers</span>
+                      </summary>
+                      
+                      <div class="complement">
+                        <p>Déplacement service après vente pour entretien et réparation d'imprimante de bureaux.</p>
+                      </div>
+      
+                  </details>
+      
+                  <details>
+                      
+                      <summary class="poste datep">
+                          <h4>Divers Mission d'intérim</h4>
+                          <span class="date">&nbsp;- 2017 - Novembre 2021</span><span class="lieu">&nbsp;- Yes - Interim d'oc - AEC</span>
+                      </summary>
+                      
+                      <div class="complement">
+                        <p>Opérateur sur tour à commande numérique, montage de chapiteaux, préparateur commande.</p>
+                      </div>
+      
+                  </details>
+
+                </div>
+    
+              </div>
+
+            </section>
+
+          </div>
+
+        </main>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
