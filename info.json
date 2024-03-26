@@ -138,18 +138,102 @@
                     "debut": ["", ""],
                     "fin": ["", ""]
                 },
-                "lieux": "Mazères",
+                "adresse": {
+                    "codePostal": "09270",
+                    "ville": "Mazères",
+                    "route": ""
+                },
                 "descMetier": "",
                 "comptenceAcquis": ""
             },
             {
-                "poste": "Caissier",
-                "entreprise": "Intermarché Hyper",
+                "poste": "",
+                "entreprise": "",
+                "contrat": "",
                 "date": {
                     "debut": ["", ""],
                     "fin": ["", ""]
                 },
-                "lieux": "Pamiers",
+                "adresse": {
+                    "codePostal": "",
+                    "ville": "",
+                    "route": ""},
+                "descMetier": "",
+                "comptenceAcquis": ""
+            },
+            {
+                "poste": "Tourneur Commande numérique",
+                "entreprise": "Premetech",
+                "contrat": "Interim",
+                "date": {
+                    "debut": ["10", "2018"],
+                    "fin": ["12", "2018"]
+                },
+                "adresse": {
+                    "codePostal": "09100",
+                    "ville": "Pamiers",
+                    "route": ""},
+                "descMetier": "",
+                "comptenceAcquis": ""
+            },
+            {
+                "poste": "Opérateur Commande numérique",
+                "entreprise": "Galy - Rochet",
+                "contrat": "Interim",
+                "date": {
+                    "debut": ["03", "2018"],
+                    "fin": ["09", "2018"]
+                },
+                "adresse": {
+                    "codePostal": "09100",
+                    "ville": "Pamiers",
+                    "route": ""},
+                "descMetier": "",
+                "comptenceAcquis": ""
+            },
+            {
+                "poste": "Equipier Autonome",
+                "entreprise": "Continental",
+                "recruteur": "Interim d'oc",
+                "contrat": "Interim",
+                "date": {
+                    "debut": ["09", "2017"],
+                    "fin": ["02", "2018"]
+                },
+                "adresse": {
+                    "codePostal": "09000",
+                    "ville": "Foix",
+                    "route": "ZA FOIX NORD PERMILHAC, Route nationale 20"
+                },
+                "descMetier": "",
+                "comptenceAcquis": ""
+            },
+            {
+                "poste": "Inventoriste",
+                "entreprise": "Adecco",
+                "contrat": "Interim",
+                "date": {
+                    "debut": ["06", "2017"]
+                },
+                "adresse": {
+                    "codePostal": "09100",
+                    "ville": "Pamiers",
+                    "route": "5 Route de Foix"},
+                "descMetier": "",
+                "comptenceAcquis": ""
+            },
+            {
+                "poste": "Hote de caisse",
+                "entreprise": "Intermarché Hyper",
+                "contrat": "CDD",
+                "date": {
+                    "debut": ["07", "2017"],
+                    "fin": ["09", "2019"]
+                },
+                "adresse": {
+                    "codePostal": "09100",
+                    "ville": "Pamiers",
+                    "route": "Route de saverdun"},
                 "descMetier": "",
                 "comptenceAcquis": ""
             }
