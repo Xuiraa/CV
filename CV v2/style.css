@@ -9,6 +9,8 @@ html {
 
 body {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 h6, .h6,
@@ -21,7 +23,7 @@ h1, .h1 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2;
-  color: var();
+  color: black;
 }
 
 h1, .h1 {
